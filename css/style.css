@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+:root{
+  --ccs-color: #0013A0;
+}
+#css-logo, #dhvsu-logo{
+  width: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#header-container{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: var(--ccs-color);
+  padding: 10px;
+}
+
+#forgot-password{
+  text-decoration: nones;
+}
