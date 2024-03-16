@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CCS DHVSU - Log in</title>
+    <link rel="stylesheet" href="/project/css/login.css">
+    <link rel="stylesheet" href="/project/css/background.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="login-container">
+      <img src="/project/picture/CCS_Logo.png">
+
+        <form>
+          <div class="form-container">
+            <h3>Login to your account</h3>
+
+            <div class="input-container">
+              <input type="email" id="username" placeholder="Username" autocomplete="off" autofocus required>
+              <div class="icon username"></div>
+            </div>
+
+            <div class="input-container">
+              <input type="password" id="password" placeholder="Password" autocomplete="off" required>
+              <div class="icon password"></div>
+            </div>
+
+            <div id="remember-me">
+              <label><input type="checkbox">Remember Me</label>
+              <label><a href="#" id="forgot-password">Forgot your password?</a></label>
+            </div>
+            <button type="button" onclick="loginForm()">Log in</button>
+            <div id="guest">
+              <a href="#" id="view-as-guest">View as a Guest</a>
+            </div>
+            <hr>
+
+            <div>
+              <button type="button">Create Account</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function loginForm(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "" || password === ""){
+          alert("Please fill in both username and password.");
+          document.getElementById("username").value = "";
+          document.getElementById("password").value = "";
+        } 
+        else{
+          window.location.href='/project/html/index.html';
+        }
+      }
+    </script>
+  </body>
+</html>
